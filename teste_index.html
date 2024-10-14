@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <p onmouseenter="trocaCor()" onmouseleave="voltaCor()" id="texto">Meu texto</p>
+    <button onclick="mudarTexto()">Mudar texto</button>
+    <script>
+        function voltaCor() {
+            document.getElementById("texto").style.backgroundColor = "green";
+        }
+        function trocaCor() {
+            document.getElementById("texto").style.backgroundColor = "red";
+        }
+        function mudarTexto() {
+            document.getElementById("texto").innerHTML = "Novo texto";
+            let a = document.createElement("a");
+            a.setAttribute("href", "www.google.com");
+            a.innerHTML = "GOOGLE";
+            document.getElementById("texto").appendChild(a);
+        }
+    </script>
+</body>
+
+</html>
